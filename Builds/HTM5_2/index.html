@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Orbital Mechanics</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
+  </head>
+  <body class="template">
+    <p>The Orbital Stability of an orbit is defined by how long how long an object in the orbit is able to maintain the same predictable path. For example a planet orbiting a star may be able to maintain its orbit for billions of years making the orbit very stable. On the other hand a satellite placed between the sun and the earth may only take sever weeks before corrections must be made to maintain the orbit.
+<br><br>The Stability of orbits is an important factor in deciding where satellites are placed as well as determining what we can expect to happen to objects in space over a long period of time.
+<br><br><b>Controls:</b>
+<br>-Use the slider on the top right to control the speed of the simulation
+<br>-Right click and drag to move the camera
+<br>-Use scroll wheel while hovering mouse over simulation to zoom in and out
+<br>-Use the buttons at the bottom to navigate
+<br>-Click on the Part 1 button to start
+</p>
+    <div style="height:700px; width:960px; margin:auto;">
+    <p class="header"><span>Unity WebGL Player | </span>Orbital Mechanics</p>
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="660px" width="960px"></canvas>
+      <br>
+      <div class="logo"></div>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="title">Orbital Mechanics</div>
+    </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 1048576000,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/HTM5_2.data",
+    codeUrl: "Release/HTM5_2.js",
+    memUrl: "Release/HTM5_2.mem",
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </div>
+   <p><b>Information about the simulation:</b><br>
+-All objects are to scale when zoomed in (if they would be too small to see on screen the visible size is increased as needed)
+<br>-Physics Calculations take place 21600 times a second (i.e. once every 4 simulated seconds when running at 1 day/s, and once every 100 seconds when running at 25 days/s)
+<br>-If the simulation isn't able to do all the calculations it needs, the time real-time clock will slow down
+<br>-Running at higher speeds will make the simulation less accurate (shouldn't really be a problem) but will not be more intensive on the computer because the number of physics steps per second is constant. 
+<br>-All position velocity, radius information are calculated using double precision numbers (15 significant digits, with exponent component ranging 10 to the +/- 308 power
+<br>-Due to the nature of how the calculations are done they are not perfectly accurate and will accumulate error over time, especially if running at higher speeds.
+<br>-All calculations take place in 3D but i placed everything in 2D because its makes it easier to see and because the visuals can only display in 2D
+<br>-All physics engine and gravity code was writen by me (Pushpinder)
+<br><br>
+<b>Refrences</b><br>
+<br>Formation of Stars. (n.d.). Retrieved May 02, 2016, from http://www.jgiesen.de/astro/stars/roche.htm
+<br>Orbits. (n.d.). Retrieved May 02, 2016, from http://www.mso.anu.edu.au/pfrancis/roleplay/MysteryPlanet/Orbits/ 
+<br>The Lagrange Points. (n.d.). Retrieved May 02, 2016, from http://map.gsfc.nasa.gov/mission/observatory_l2.html 
+<br>Types of Orbits. (n.d.). Retrieved May 02, 2016, from http://www.polaris.iastate.edu/EveningStar/Unit4/unit4_sub3.htm 
+<br><br>Last Update:7:30 PM 5/14/2016</p>
+  </body>
+</html>
